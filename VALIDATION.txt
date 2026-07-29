@@ -1,0 +1,14 @@
+Validation performed in the repair environment:
+- Strict TypeScript source validation with local dependency declarations: PASS
+- Internal import resolution: PASS
+- Explicit any scan in app/components/lib/types: PASS (none found)
+- Currency/date/terbilang utility tests: PASS
+- PBKDF2 and legacy-password migration tests: PASS
+
+Not executed in this environment:
+- npm ci / next build, because the npm package registry was unavailable.
+
+Run locally:
+  npm ci
+  npm run typecheck
+  npm run build
